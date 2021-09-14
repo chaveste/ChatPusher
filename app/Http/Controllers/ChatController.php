@@ -28,9 +28,7 @@ class ChatController extends Controller
             );
         $this->SaveJson($ch);
     }
-
-
-
+    
     function SaveJson(Chat $chp){
         try {
             $jsonfile = Storage::disk('local')->exists('data.json') ? json_decode(Storage::disk('local')->get('data.json')) : [];
